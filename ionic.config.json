@@ -1,0 +1,7 @@
+{
+  "name": "proySemProgMovil",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
