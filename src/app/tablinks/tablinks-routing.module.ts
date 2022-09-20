@@ -8,6 +8,7 @@ const routes: Routes = [
     path: 'tablinks',
     component: TablinksPage,
     children: [
+
     {
       path: 'perfil',
       loadChildren: () => import('../perfil/perfil.module').then( m => m.PerfilPageModule)
@@ -22,7 +23,8 @@ const routes: Routes = [
     },
     {
       path:'',
-      redirectTo: '/tablinks/perfil',
+      redirectTo: '/tablinks/inicio',
+      //redirectTo: '/tablinks/perfil',
       pathMatch: 'full'
     },
 
@@ -30,7 +32,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tablinks/perfil',
+    redirectTo: '/tablinks/inicio',
     pathMatch: 'full'
   },
 ];

@@ -1,9 +1,31 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>configuracion</ion-title>
+    <ion-title>Configuracion</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-icon name="settings" slot="start"></ion-icon>
+    <button ion-button color="primary" [routerLink]="['']">Volver a Productos</button>
+  <label></label>
+  <div>
+    <header>GESTIONAR</header>
+    <ion-list>
+      <ion-item *ngFor="let opciones of listaConfGest">
+        <ion-icon name="document-text-outline"></ion-icon>
+        <ion-label>{{opciones.nombre}} </ion-label>
+      </ion-item>
+    </ion-list>
 
+  </div>
+  <div>
+    <header>LEGAL</header>
+    <ion-list>
+      <ion-item *ngFor="let op of listaConfLegal">
+        <ion-icon name="document-text-outline"></ion-icon>
+        <ion-label>{{op.nombre}} </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
+

@@ -7,16 +7,38 @@
 
 <ion-content>
   <ion-searchbar></ion-searchbar>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      <ion-card-title>Card Title</ion-card-title>
-    </ion-card-header>
+  <!--
+    Aquí va el carrusel
+    -->
 
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
-  </ion-card>
 
-  </ion-content>
+  <ion-list>
+    <ion-item *ngFor="let producto of listaProductos">
+      <ion-card>
+        <ion-card-header>
+          <img [src]="producto.imagen">
+
+          <ion-card-subtitle>{{producto.subtit}}</ion-card-subtitle>
+          <ion-card-title>{{producto.titulo}}</ion-card-title>
+          <ion-card-subtitle>$ {{producto.precio}}</ion-card-subtitle>
+          <ion-icon name="cart"></ion-icon>
+          <button ion-button color="primary" [routerLink]="['/detalle']">Agregar al carrito</button>
+          <!-- <i></i> -->
+        </ion-card-header>
+
+        <ion-card-content>{{producto.descripcion}}</ion-card-content>
+      </ion-card>
+
+      <!---
+      <ion-label>
+        <img [src]="producto.imagen">
+        <h1>{{producto.titulo}}</h1>
+        <h2>{{producto.subtit}}</h2>
+        <h2>{{producto.precio}}</h2>
+        <p>{{producto.descripcion}}</p>
+      </ion-label>
+      -->
+    </ion-item>
+  </ion-list>
+
+</ion-content>
