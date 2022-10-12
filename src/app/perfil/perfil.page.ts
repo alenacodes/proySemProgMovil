@@ -11,5 +11,12 @@ export class PerfilPage implements OnInit {
 
   ngOnInit() {
   }
+  
+
+  //buttonClick() {
+   // console.log("hello there");
+  
+  //funcsalir(){
 
 }
+
